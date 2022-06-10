@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build lewis9914/midterm_review/docker --file Dockerfile --tag lewis9914/midterm_review 
+      run: docker build docker/ --file docker/Dockerfile --tag lewis9914/midterm_review 
     - name: Push the image to DockerHub
       run: docker login -u lewis9914 -p ${{ secrets.DOCKER_TOKEN }} && docker push lewis9914/midterm_review
     
